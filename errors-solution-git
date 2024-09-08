@@ -1,0 +1,55 @@
+error in git tool solution:-
+
+Error:-
+
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+
+Solution:- 
+
+Merge (Default Behavior)
+
+command:-  git config pull.rebase false
+
+Rebase
+ 
+command:- git config pull.rebase true
+
+
+Globally: Use the --global flag to set these options for all repositories on your system.
+
+command:- git config pull.rebase true
+
+
+
+Error:- [rejected]        master -> master (fetch first)
+
+Solution :- git fetch origin
+
+error:-  ! [rejected]        master -> master (non-fast-forward)
+
+Solution:- git rebase origin/master
+           git rebase --continue
+
+Solved :- now try this :- git push origin master
+
+* Error:- 
+
+[root@ip-172-31-9-252 ec2-user]# docker exec -it jenkins /bin/bash
+jenkins@cad4f9aeaa0e:/$ /var/jenkins_home/secrets/initialAdminPassword
+bash: /var/jenkins_home/secrets/initialAdminPassword: Permission denied
+
+
+Solution:-docker exec -u root -it jenkins /bin/bash
+ cat /var/jenkins_home/secrets/initialAdminPassword
+
+
+error 
+
+mvn pom file error:- 
+solution:- mvn -f <path>/pom.xml clean package
+
+
+
+
